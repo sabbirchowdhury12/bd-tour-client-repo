@@ -4,8 +4,15 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider/AuthProvider';
 
 const Navbar = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     console.log(user);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+            }).catch(err => console.error(err));
+    };
+
     return (
         <div className="navbar bg-transparent">
             <div className="navbar-start">
@@ -27,7 +34,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button>Logout</button>
+                <button onClick={handleLogOut}>Logout</button>
             </div>
         </div>
     );
