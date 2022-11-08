@@ -1,5 +1,6 @@
 import React from 'react';
 import { useContext } from 'react';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const ReviewSection = ({ service }) => {
@@ -35,8 +36,10 @@ const ReviewSection = ({ service }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-
+                if (data.acknowledged) {
+                    toast.success('review added successfully');
+                    form.reset();
+                }
             }).catch(er => console.error(er));
 
     };
