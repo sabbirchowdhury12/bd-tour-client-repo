@@ -4,12 +4,11 @@ import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Register = () => {
 
-    const { createUserWithEmail } = useContext(AuthContext);
+    const { createUserWithEmail, updateUserProfile } = useContext(AuthContext);
 
     const handleRegister = (event) => {
         event.preventDefault();
         const form = event.target;
-        console.log(form.name);
         const email = form.email.value;
         const password = form.password.value;
         const name = form.name.value;
@@ -18,9 +17,21 @@ const Register = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+                handleUserUpadateProfile(name);
+                form.reset();
             }).catch(err => console.log(err));
-
     };
+
+    const handleUserUpadateProfile = (name) => {
+        const profile = {
+            displayName: name,
+        };
+        updateUserProfile(profile)
+            .then(() => { })
+            .then(error => console.error(error));
+    };
+
+
     return (
         <div className='container mx-auto p-10 bg-slate-700'>
             <form onSubmit={handleRegister} className="card-body">
