@@ -19,7 +19,7 @@ const ServicesCard = ({ service }) => {
                     <div className=" ">Full Day</div>
                     <div className="justify-end ">${price}</div>
                 </div>
-                <Link to={`services/${_id}`}><button className="btn btn-outline">Button</button></Link>
+                <Link to={`/services/${_id}`}><button className="btn btn-outline">Button</button></Link>
             </div>
         </div>
     );
