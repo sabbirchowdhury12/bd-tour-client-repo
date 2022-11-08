@@ -1,0 +1,56 @@
+[
+    {
+        "serviceId": "1",
+        "title": "Cox's Bazar",
+        "img": "https://cdn.pixabay.com/photo/2018/03/20/14/00/sea-3243357__480.jpg",
+        "rating": "5",
+        "price": "300",
+        "desc": "Cox's Bazar is a town on the southeast coast of Bangladesh. It's known for its very long, sandy beachfront, stretching from Sea Beach in the north to Kolatoli Beach in the south. Aggameda Khyang monastery is home to bronze statues and centuries-old Buddhist manuscripts. South of town, the tropical rainforest of Himchari National Park has waterfalls and many birds. North, sea turtles breed on nearby Sonadia Island. ",
+        "review": "12"
+    },
+    {
+        "serviceId": "2",
+        "title": "Bandarban",
+        "img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/35/35/10/cloudy.jpg?w=1200&h=-1&s=1",
+        "rating": "4.5",
+        "price": "200",
+        "desc": "This is an excellent place to visit with friends and families. Everyone will be excited during climbing towards Nilgiri through 'Chander Gari' (Local name of the vehicle like hood open mini truck). The sky, the hill, the greenery, cloud, lot of small bazar and photo shooting area and lot of other things alongwith Nilgiri itself will make you highly emotional. it will be a great enjoyable tour!",
+        "review": "10"
+    },
+    {
+        "serviceId": "3",
+        "title": "Ahsan Manzil",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlOnbZSkJBx_VIXOyU6k3f6bqeobNR00Eorg&usqp=CAU",
+        "rating": "4.2",
+        "price": "150",
+        "desc": "Ahsan Manzil is the erstwhile official residential palace and seat of the Nawab of Dhaka. The building is situated at Kumartoli along the banks of the Buriganga River in Dhaka, Bangladesh. Construction was started in 1859 and was completed in 1872. It was constructed in the Indo-Saracenic Revival architecture. It has been designated as a national museum. ",
+        "review": "8"
+    },
+    {
+        "serviceId": "4",
+        "title": "National Martyrs' Monument",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLaWiCncNr-NzmyvpkO5nH-jYLOlvI4LzjPw&usqp=CAU",
+        "rating": "4.4",
+        "price": "200",
+        "desc": "The National Martyrs' Memorial is the national monument of Bangladesh, set up in the memory of those who died in the Bangladesh War of Independence of 1971, which brought independence and separated Bangladesh from Pakistan. The monument is located in Savar, about 35 km north-west of the capital, Dhaka. It was designed by Syed Mainul Hossain and built by Concord Group.",
+        "review": "5"
+    },
+    {
+        "serviceId": "5",
+        "title": "Sajek Valley",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUR1QtkR_-sTUbDxKN0yB-D3DfZ4bHkByjPw&usqp=CAU",
+        "rating": "4.9",
+        "price": "300",
+        "desc": "If you want to see the land of the cloud in Bangladesh then you have to visit the queen of hills, Sajek Valley. Visiting this place will fulfill your dream of walking through the clouds. This is the best tourist spot in Bangladesh. The experience of going to Sajek by zigzag road through the cloud is really great. It is also called the roof of Rangamati because it is surrounded by hills. The valley is 1800 feet above from the sea level. If you are lucky enough, you can enjoy three forms of nature in a day.     ",
+        "review": "15"
+    },
+    {
+        "serviceId": "6",
+        "title": "Sundarbans",
+        "img": "https://www.thethirdpole.net/content/uploads/2020/03/GJEG94.jpg",
+        "rating": "5",
+        "price": "250",
+        "desc": "Sundarbans has declared World Heritage Site by UNESCO which is the largest Mangrove Forest situated between two countries. It is the kingdom of Royal Bengal tiger and you will find various kinds of species of birds, animals & plants and I think you should visit the tranquilizing beauty of Sundarbans once in your life.",
+        "review": "11"
+    }
+]
