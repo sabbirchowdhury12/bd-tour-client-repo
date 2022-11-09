@@ -6,10 +6,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
+
   return (
     <div>
       <RouterProvider router={router} />
       <ToastContainer />
+
     </div>
   );
 }
