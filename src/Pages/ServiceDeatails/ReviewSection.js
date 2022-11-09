@@ -15,6 +15,7 @@ const ReviewSection = ({ service }) => {
         const form = event.target;
         const name = form.name.value;
         const photoURL = form.photoURL.value;
+        const rating = form.rating.value || '0';
         const email = user?.email || 'unregistered';
         const message = form.message.value;
 
@@ -24,6 +25,7 @@ const ReviewSection = ({ service }) => {
             tourist: name,
             email,
             photoURL,
+            rating,
             message
         };
 
@@ -51,6 +53,7 @@ const ReviewSection = ({ service }) => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
                     <input name="name" type="text" placeholder="Full Name" className="input input-ghost w-full  input-bordered" required />
                     <input name="photoURL" type="text" placeholder="photoURL" className="input input-ghost w-full  input-bordered" required />
+                    <input name="rating" type="text" placeholder="rating" className="input input-ghost w-full  input-bordered" required />
                     <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered" readOnly />
                 </div>
                 <textarea name="message" className="textarea textarea-bordered h-24 w-full my-4" placeholder="Your Message" required></textarea>
