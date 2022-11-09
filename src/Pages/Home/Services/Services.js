@@ -2,9 +2,11 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTitle } from '../../../hooks/useTitle';
 import ServicesCard from './ServicesCard';
 
 const Services = () => {
+
 
     const [services, setServices] = useState([]);
 

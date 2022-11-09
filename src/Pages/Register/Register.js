@@ -2,9 +2,11 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import { useTitle } from '../../hooks/useTitle';
 
 const Register = () => {
 
+    useTitle('register');
     const { createUserWithEmail, updateUserProfile } = useContext(AuthContext);
 
     const handleRegister = (event) => {
@@ -40,7 +42,7 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text text-white">Name</span>
                     </label>
-                    <input type="text" name='name' placeholder="Your Name" className="input input-bordered" />
+                    <input type="text" name='name' placeholder="Your Name" className="input input-bordered" required />
                 </div>
                 <div className="form-control">
                     <label className="label">

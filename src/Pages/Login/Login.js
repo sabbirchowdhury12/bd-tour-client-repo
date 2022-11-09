@@ -4,9 +4,11 @@ import { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import { useTitle } from '../../hooks/useTitle';
 
 const Login = () => {
 
+    useTitle('login');
     const { signWithGoogle, loginWithEmail } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const navigate = useNavigate();

@@ -12,7 +12,7 @@ const ServiceSection = ({ service }) => {
                 <div className='text-center grid grid-cols-1 gap-3 justify-center items-center'>
                     <div className='w-4/5 h-4/5 mx-auto border-8 border-warning'>
                         <PhotoProvider>
-                            <PhotoView src="/1.jpg">
+                            <PhotoView src={img}>
                                 <img src={img} className='w-full h-full' alt="" />
                             </PhotoView>
                         </PhotoProvider>
