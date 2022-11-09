@@ -1,4 +1,6 @@
 import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const ServiceSection = ({ service }) => {
 
@@ -9,7 +11,12 @@ const ServiceSection = ({ service }) => {
             <div className='p-5 bg-gray-900	 text-white'>
                 <div className='text-center grid grid-cols-1 gap-3 justify-center items-center'>
                     <div className='w-4/5 h-4/5 mx-auto border-8 border-warning'>
-                        <img src={img} className='w-full h-full' alt="" />
+                        <PhotoProvider>
+                            <PhotoView src="/1.jpg">
+                                <img src={img} className='w-full h-full' alt="" />
+                            </PhotoView>
+                        </PhotoProvider>
+                        {/* <img src={img} className='w-full h-full' alt="" /> */}
                     </div>
                     <div>
                         <h2 className='text-4xl font-semibold text-warning'>{title} - ${price}</h2>

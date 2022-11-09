@@ -4,7 +4,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import ReviewSection from './ReviewSection';
 import ServiceSection from './ServiceSection';
-import ShowAllReviews from './ShowAllReviews';
 
 const ServiceDeatails = () => {
 

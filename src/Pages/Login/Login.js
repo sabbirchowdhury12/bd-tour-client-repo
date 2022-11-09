@@ -2,13 +2,16 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import React from 'react';
 import { useContext } from 'react';
 import { FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 
 const Login = () => {
 
     const { signWithGoogle, loginWithEmail } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -21,6 +24,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                navigate(from, { replace: true });
             }).catch(error => {
                 console.error(error);
             });

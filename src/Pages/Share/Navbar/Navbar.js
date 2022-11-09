@@ -24,7 +24,7 @@ const Navbar = () => {
                         <li><Link to='/blog'>Blog</Link></li>
                         {
                             user?.uid && <>
-                                <li><Link to='/blog'>My reviews</Link></li>
+                                <li><Link to='/myreview'>My reviews</Link></li>
                                 <li><Link to='/blog'>Add service</Link></li>
                             </>
                         }
@@ -38,7 +38,7 @@ const Navbar = () => {
                     <li><Link to='/blog'>Blog</Link></li>
                     {
                         user?.uid && <>
-                            <li><Link to='/blog'>My reviews</Link></li>
+                            <li><Link to='/myreview'>My reviews</Link></li>
                             <li><Link to='/blog'>Add service</Link></li>
                         </>
                     }
