@@ -1,3 +1,4 @@
+import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
@@ -10,6 +11,7 @@ const ReviewSection = ({ service }) => {
     const { user } = useContext(AuthContext);
     const { title, _id } = service;
     const [reviews, setReviews] = useState([]);
+    const [alert, setAlert] = useState([]);
 
 
     useEffect(() => {
@@ -19,7 +21,7 @@ const ReviewSection = ({ service }) => {
                 const filter = data.filter(x => x.servicesId === _id);
                 setReviews(filter);
             });
-    }, []);
+    }, [_id, alert]);
 
     const handlePlaceOrder = (event) => {
 
@@ -50,6 +52,7 @@ const ReviewSection = ({ service }) => {
         })
             .then(res => res.json())
             .then(data => {
+                setAlert(data);
                 if (data.acknowledged) {
                     toast.success('review added successfully');
                     form.reset();
