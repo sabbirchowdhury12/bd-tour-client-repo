@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import ShowAllReviews from './ShowAllReviews';
 
 const ReviewSection = ({ service }) => {
 
 
     const { user } = useContext(AuthContext);
     const { title, _id } = service;
+    const [reviews, setReviews] = useState([]);
+
+
+    useEffect(() => {
+        fetch('http://localhost:5000/review')
+            .then(res => res.json())
+            .then(data => {
+                const filter = data.filter(x => x.servicesId === _id);
+                setReviews(filter);
+            });
+    }, []);
 
     const handlePlaceOrder = (event) => {
 
@@ -47,19 +59,23 @@ const ReviewSection = ({ service }) => {
     };
 
     return (
-        <div className='container mx-auto my-10'>
-            <h2 className="text-4xl">You are about to order: <span className='font-bold text-yellow-900'>{title}</span></h2>
-            <form className='p-4' onSubmit={handlePlaceOrder}>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-                    <input name="name" type="text" placeholder="Full Name" className="input input-ghost w-full  input-bordered" required />
-                    <input name="photoURL" type="text" placeholder="photoURL" className="input input-ghost w-full  input-bordered" required />
-                    <input name="rating" type="text" placeholder="rating" className="input input-ghost w-full  input-bordered" required />
-                    <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered" readOnly />
-                </div>
-                <textarea name="message" className="textarea textarea-bordered h-24 w-full my-4" placeholder="Your Message" required></textarea>
+        <div>
+            <ShowAllReviews reviews={reviews}></ShowAllReviews>
 
-                <input className='btn' type="submit" value="Give a Review" />
-            </form>
+            <div className='container mx-auto my-10'>
+                <h2 className="text-4xl text-center">Review For: <span className='font-bold text-yellow-900'>{title}</span></h2>
+                <form className='p-4' onSubmit={handlePlaceOrder}>
+                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+                        <input name="name" type="text" placeholder="Full Name" className="input input-ghost w-full  input-bordered" required />
+                        <input name="photoURL" type="text" placeholder="photoURL" className="input input-ghost w-full  input-bordered" required />
+                        <input name="rating" type="text" placeholder="rating" className="input input-ghost w-full  input-bordered" required />
+                        <input name="email" type="text" placeholder="Your email" defaultValue={user?.email} className="input input-ghost w-full  input-bordered" readOnly />
+                    </div>
+                    <textarea name="message" className="textarea textarea-bordered h-24 w-full my-4" placeholder="Your Message" required></textarea>
+
+                    <input className='btn' type="submit" value="Leave a Review" />
+                </form>
+            </div>
         </div>
     );
 };

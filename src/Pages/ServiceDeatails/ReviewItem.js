@@ -31,7 +31,7 @@ const ReviewItem = ({ review }) => {
             <td>
                 {serviceName}
                 <br />
-                <span className="badge badge-ghost badge-sm">{rating}</span>
+                <span className="badge badge-ghost badge-sm">Rating: {rating}</span>
             </td>
             <td>{message}</td>
             <th>

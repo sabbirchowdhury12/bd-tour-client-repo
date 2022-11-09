@@ -14,7 +14,6 @@ const ServiceDeatails = () => {
     return (
         <div>
             <ServiceSection service={service}></ServiceSection>
-            <ShowAllReviews service={service}></ShowAllReviews>
             {
                 user?.uid ?
                     <ReviewSection service={service}></ReviewSection> :

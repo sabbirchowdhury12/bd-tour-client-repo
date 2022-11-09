@@ -3,31 +3,25 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import ReviewItem from './ReviewItem';
 
-const ShowAllReviews = ({ service }) => {
-    const { _id } = service;
-
-    const [reviews, setReviews] = useState([]);
-
-    useEffect(() => {
-        fetch(`http://localhost:5000/review/${_id}`)
-            .then(res => res.json())
-            .then(data => setReviews(data));
-    }, []);
+const ShowAllReviews = ({ reviews }) => {
+    console.log(reviews);
 
     return (
         <div className='container mx-auto'>
-            <h2 className="text-5xl text-center text-yellow-900 mt-20 mb-5">There is {reviews.length} review</h2>
+            <h2 className="text-4xl text-center text-yellow-900 mt-20 mb-5">There is {reviews.length} review for this service</h2>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
                     <thead>
-                        <tr>
-                            <th>
-                            </th>
-                            <th>Name</th>
-                            <th>Place</th>
-                            <th>Review</th>
-                            <th></th>
-                        </tr>
+                        {
+                            reviews.length ? <tr>
+                                <th>
+                                </th>
+                                <th>Name</th>
+                                <th>Place</th>
+                                <th>Review</th>
+                                <th></th>
+                            </tr> : null
+                        }
                     </thead>
                     <tbody>
                         {
