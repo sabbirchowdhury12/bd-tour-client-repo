@@ -13,13 +13,15 @@ const ServiceDeatails = () => {
     const service = useLoaderData();
 
     return (
-        <div>
-            <ServiceSection service={service}></ServiceSection>
-            {
-                user?.uid ?
-                    <ReviewSection service={service}></ReviewSection> :
-                    <h2 className='text-4xl text-center my-10 font-semibold text-yellow-900'>You are not Login. To give a review please <Link to='/login' className='underline text-primary'>Login</Link></h2>
-            }
+        <div className='h-full'>
+            <div>
+                <ServiceSection service={service}></ServiceSection>
+                {
+                    user?.uid ?
+                        <ReviewSection service={service}></ReviewSection> :
+                        <h2 className='text-4xl text-center my-10 font-semibold text-yellow-900'>You are not Login. To give a review please <Link to='/login' className='underline text-primary'>Login</Link></h2>
+                }
+            </div>
         </div>
     );
 };

@@ -1,6 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import ReviewItem from './ReviewItem';
 
 const ShowAllReviews = ({ reviews }) => {
@@ -13,8 +11,6 @@ const ShowAllReviews = ({ reviews }) => {
                     <thead>
                         {
                             reviews.length ? <tr>
-                                <th>
-                                </th>
                                 <th>Name</th>
                                 <th>Place</th>
                                 <th>Review</th>

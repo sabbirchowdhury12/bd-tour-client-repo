@@ -15,7 +15,7 @@ const ReviewSection = ({ service }) => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/review')
+        fetch('https://my-assaignment-11-server-side.vercel.app/review')
             .then(res => res.json())
             .then(data => {
                 const filter = data.filter(x => x.servicesId === _id);
@@ -43,7 +43,7 @@ const ReviewSection = ({ service }) => {
             message
         };
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://my-assaignment-11-server-side.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -76,7 +76,7 @@ const ReviewSection = ({ service }) => {
                     </div>
                     <textarea name="message" className="textarea textarea-bordered h-24 w-full my-4" placeholder="Your Message" required></textarea>
 
-                    <input className='btn' type="submit" value="Leave a Review" />
+                    <input className='btn btn-secondary' type="submit" value="Leave a Review" />
                 </form>
             </div>
         </div>

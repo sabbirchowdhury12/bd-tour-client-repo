@@ -23,12 +23,12 @@ export const router = createBrowserRouter([
             {
                 path: '/services',
                 element: <AllServices></AllServices>,
-                loader: () => fetch('http://localhost:5000/services')
+                loader: () => fetch('https://my-assaignment-11-server-side.vercel.app/services')
             },
             {
                 path: '/services/:id',
                 element: <ServiceDeatails></ServiceDeatails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({ params }) => fetch(`https://my-assaignment-11-server-side.vercel.app/services/${params.id}`)
             },
             {
                 path: '/login',
@@ -49,12 +49,12 @@ export const router = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <UpdateMyReview />,
-                loader: ({ params }) => fetch(`http://localhost:5000/review/${params.id}`)
+                loader: ({ params }) => fetch(`https://my-assaignment-11-server-side.vercel.app/review/${params.id}`)
             },
 
             {
                 path: '/addService',
-                element: <AddService />
+                element: <PrivateRoutes><AddService /></PrivateRoutes>
             }
         ]
     }

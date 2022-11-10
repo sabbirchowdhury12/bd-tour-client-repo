@@ -5,14 +5,19 @@ import { toast } from 'react-toastify';
 import { useTitle } from '../../hooks/useTitle';
 
 const AddService = () => {
+
     useTitle('add service');
-    const [service, setService] = useState({});
+    const time = {
+        date: new Date(Date.now())
+    };
+    const [service, setService] = useState(time);
+
+
 
     const handleAddService = (event) => {
         event.preventDefault();
-        const form = event.target;
 
-        fetch('http://localhost:5000/services', {
+        fetch('https://my-assaignment-11-server-side.vercel.app/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -31,7 +36,7 @@ const AddService = () => {
     const handleInputChange = event => {
         const field = event.target.name;
         const value = event.target.value;
-        const newUser = { ...service };
+        const newUser = { ...service, ...time };
         newUser[field] = value;
         setService(newUser);
     };
@@ -54,7 +59,7 @@ const AddService = () => {
                 </div>
                 <textarea onChange={handleInputChange} name="desc" className="textarea textarea-bordered h-24 w-full my-4" placeholder="Your Message" required></textarea>
 
-                <input className='btn' type="submit" value="Add a Service" />
+                <input className='btn btn-secondary' type="submit" value="Add a Service" />
             </form>
 
 

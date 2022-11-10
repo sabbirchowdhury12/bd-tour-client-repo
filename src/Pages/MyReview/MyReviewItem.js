@@ -7,11 +7,11 @@ const MyReviewItem = ({ review, handleDelete }) => {
 
     return (
         <tr>
-            <th> <button onClick={() => handleDelete(_id)}>X</button> </th>
+            <th> <button className='text-secondary' onClick={() => handleDelete(_id)}>X</button> </th>
             <td>{tourist}</td>
             <td>{serviceName}</td>
             <td>{message}</td>
-            <td><Link to={`/update/${_id}`}><button>Update</button></Link></td>
+            <td><Link to={`/update/${_id}`}><button className='text-secondary'>Update</button></Link></td>
         </tr>
     );
 };
