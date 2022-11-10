@@ -21,8 +21,8 @@ const ServiceSection = ({ service }) => {
                     <div>
                         <h2 className='text-4xl font-semibold text-warning'>{title} - ${price}</h2>
                         <p className='text-xl py-5 leading-9'>{desc}</p>
-                        <p className='text-xl'>Total Review: {review}</p>
-                        <p className='text-xl'>Rating: {rating}</p>
+                        <p className='text-xl'>Total Review: {review ? review : '0'}</p>
+                        <p className='text-xl'>Rating: {rating ? rating : "0"}</p>
                     </div>
                 </div>
             </div>

@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import ReviewItem from './ReviewItem';
 
 const ShowAllReviews = ({ reviews }) => {
-    console.log(reviews);
 
     return (
         <div className='container mx-auto'>

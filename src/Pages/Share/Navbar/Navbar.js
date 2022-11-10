@@ -25,7 +25,7 @@ const Navbar = () => {
                         {
                             user?.uid && <>
                                 <li><Link to='/myreview'>My reviews</Link></li>
-                                <li><Link to='/blog'>Add service</Link></li>
+                                <li><Link to='/addService'>Add service</Link></li>
                             </>
                         }
                     </ul>
@@ -39,7 +39,7 @@ const Navbar = () => {
                     {
                         user?.uid && <>
                             <li><Link to='/myreview'>My reviews</Link></li>
-                            <li><Link to='/blog'>Add service</Link></li>
+                            <li><Link to='/addService'>Add service</Link></li>
                         </>
                     }
                 </ul>

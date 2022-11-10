@@ -22,7 +22,7 @@ const ServicesCard = ({ service }) => {
                 </h2>
                 <p>{des}...
                 </p>
-                <p>Review: {review}</p>
+                <p>Review: {review ? review : '0'}</p>
                 <div className="flex justify-between ">
                     <div className=" ">Full Day</div>
                     <div className="justify-end ">${price}</div>
