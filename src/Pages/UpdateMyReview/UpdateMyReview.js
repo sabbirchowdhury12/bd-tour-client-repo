@@ -2,10 +2,12 @@ import React from 'react';
 import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { useTitle } from '../../hooks/useTitle';
 
 const UpdateMyReview = () => {
+
+    useTitle('upadate review');
     const prevReview = useLoaderData();
-    const { tourist, rating, message } = prevReview;
 
     console.log(prevReview);
     const [review, setReview] = useState({});

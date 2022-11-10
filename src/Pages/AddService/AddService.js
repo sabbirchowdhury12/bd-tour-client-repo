@@ -1,4 +1,3 @@
-import { success } from 'daisyui/src/colors';
 import React from 'react';
 import { useState } from 'react';
 import { toast } from 'react-toastify';

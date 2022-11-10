@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReviewItem = ({ review }) => {
 
-    const { _id, photoURL, tourist, serviceName, message, rating, email } = review;
+    const { photoURL, tourist, serviceName, message, rating, email } = review;
 
 
     return (

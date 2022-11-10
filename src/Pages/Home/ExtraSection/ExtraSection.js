@@ -11,17 +11,17 @@ const ExtraSection = () => {
                 <div>
                     <img src={img1} alt="" />
                     <h2 className='text-xl font-bold my-1'>Alvy</h2>
-                    <p >Photographer| 5 years of exprerience</p>
+                    <p >Photographer | 3 years of exprerience</p>
                 </div>
                 <div>
                     <img src={img2} alt="" />
                     <h2 className='text-xl font-bold my-1' >Lucifer</h2>
-                    <p>Photographer| 5 years of exprerience</p>
+                    <p>Professional guide | 5 years of exprerience</p>
                 </div>
                 <div>
                     <img src={img3} alt="" />
                     <h2 className='text-xl font-bold my-1'>Katrina</h2>
-                    <p>Photographer| 5 years of exprerience</p>
+                    <p>Photographer | 4 years of exprerience</p>
                 </div>
             </div>
         </div>
