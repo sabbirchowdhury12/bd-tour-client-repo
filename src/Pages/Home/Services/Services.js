@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Loading from '../../../components/Loading/Loading';
 import { useTitle } from '../../../hooks/useTitle';
 import ServicesCard from './ServicesCard';
 
@@ -15,6 +16,10 @@ const Services = () => {
             .then(res => res.json())
             .then(data => setServices(data));
     }, []);
+
+    if (!services.length) {
+        return <Loading />;
+    }
     return (
         <div className='my-8 w-4/5  mx-auto'>
             <h2 className='text-center text-3xl font-semibold py-5'>Our Tour</h2>
